@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "type": "call",
+    "contactId": 1,
+    "dealId": 1,
+    "description": "Initial discovery call about enterprise requirements",
+    "date": "2024-01-15T14:30:00Z",
+    "duration": 45
+  },
+  {
+    "Id": 2,
+    "type": "email",
+    "contactId": 1,
+    "dealId": 1,
+    "description": "Sent proposal document and pricing information",
+    "date": "2024-01-18T10:15:00Z",
+    "duration": 0
+  },
+  {
+    "Id": 3,
+    "type": "meeting",
+    "contactId": 2,
+    "dealId": 2,
+    "description": "Demo session for startup package features",
+    "date": "2024-01-12T15:00:00Z",
+    "duration": 60
+  },
+  {
+    "Id": 4,
+    "type": "call",
+    "contactId": 3,
+    "dealId": 3,
+    "description": "Technical discussion about integration requirements",
+    "date": "2024-01-20T11:30:00Z",
+    "duration": 30
+  },
+  {
+    "Id": 5,
+    "type": "email",
+    "contactId": 4,
+    "dealId": 4,
+    "description": "Follow-up email with case studies",
+    "date": "2024-01-16T09:45:00Z",
+    "duration": 0
+  },
+  {
+    "Id": 6,
+    "type": "meeting",
+    "contactId": 5,
+    "dealId": 5,
+    "description": "Contract signing meeting",
+    "date": "2024-01-21T13:00:00Z",
+    "duration": 30
+  },
+  {
+    "Id": 7,
+    "type": "call",
+    "contactId": 6,
+    "dealId": 6,
+    "description": "Compliance requirements discussion",
+    "date": "2024-01-10T16:20:00Z",
+    "duration": 40
+  },
+  {
+    "Id": 8,
+    "type": "note",
+    "contactId": 2,
+    "dealId": null,
+    "description": "Interested in additional features for team collaboration",
+    "date": "2024-01-19T12:30:00Z",
+    "duration": 0
+  }
+]

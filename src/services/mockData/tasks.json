@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "title": "Follow up with Sarah Johnson",
+    "description": "Send technical documentation and implementation timeline",
+    "dueDate": "2024-01-25T17:00:00Z",
+    "priority": "high",
+    "contactId": 1,
+    "completed": false
+  },
+  {
+    "Id": 2,
+    "title": "Prepare demo for InnovateStart",
+    "description": "Customize demo to show startup-specific features",
+    "dueDate": "2024-01-28T12:00:00Z",
+    "priority": "medium",
+    "contactId": 2,
+    "completed": false
+  },
+  {
+    "Id": 3,
+    "title": "Draft contract for Global Enterprises",
+    "description": "Include custom integration clauses and SLA terms",
+    "dueDate": "2024-01-26T15:00:00Z",
+    "priority": "high",
+    "contactId": 3,
+    "completed": true
+  },
+  {
+    "Id": 4,
+    "title": "Send case studies to Creative Studio",
+    "description": "Include similar creative agency success stories",
+    "dueDate": "2024-01-30T10:00:00Z",
+    "priority": "low",
+    "contactId": 4,
+    "completed": false
+  },
+  {
+    "Id": 5,
+    "title": "Schedule onboarding call",
+    "description": "Set up initial onboarding session with Park Consulting",
+    "dueDate": "2024-01-24T14:00:00Z",
+    "priority": "medium",
+    "contactId": 5,
+    "completed": false
+  },
+  {
+    "Id": 6,
+    "title": "Research HIPAA compliance",
+    "description": "Gather information about healthcare data requirements",
+    "dueDate": "2024-01-27T11:00:00Z",
+    "priority": "high",
+    "contactId": 6,
+    "completed": false
+  }
+]

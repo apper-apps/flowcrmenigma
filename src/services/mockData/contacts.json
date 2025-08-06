@@ -1,0 +1,68 @@
+[
+  {
+    "Id": 1,
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@techcorp.com",
+    "phone": "+1 (555) 123-4567",
+    "company": "TechCorp Solutions",
+    "position": "VP of Engineering",
+    "notes": "Very interested in our enterprise package. Prefers email communication.",
+    "createdAt": "2024-01-15T10:30:00Z",
+    "updatedAt": "2024-01-20T14:22:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Michael Chen",
+    "email": "m.chen@innovatestart.io",
+    "phone": "+1 (555) 987-6543",
+    "company": "InnovateStart",
+    "position": "CEO",
+    "notes": "Startup founder looking for scalable solutions. Very budget conscious.",
+    "createdAt": "2024-01-10T09:15:00Z",
+    "updatedAt": "2024-01-18T16:45:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Emily Rodriguez",
+    "email": "emily.r@globalenterprises.com",
+    "phone": "+1 (555) 456-7890",
+    "company": "Global Enterprises",
+    "position": "IT Director",
+    "notes": "Needs integration with existing systems. Decision maker for IT purchases.",
+    "createdAt": "2024-01-08T11:20:00Z",
+    "updatedAt": "2024-01-22T13:30:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "David Williams",
+    "email": "dwilliams@creativestudio.com",
+    "phone": "+1 (555) 234-5678",
+    "company": "Creative Studio",
+    "position": "Operations Manager",
+    "notes": "Small creative agency. Needs simple, user-friendly solutions.",
+    "createdAt": "2024-01-12T15:45:00Z",
+    "updatedAt": "2024-01-19T10:12:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "Lisa Park",
+    "email": "lisa.park@consulting.pro",
+    "phone": "+1 (555) 345-6789",
+    "company": "Park Consulting",
+    "position": "Principal Consultant",
+    "notes": "Independent consultant. Interested in our professional tier.",
+    "createdAt": "2024-01-05T08:30:00Z",
+    "updatedAt": "2024-01-21T12:15:00Z"
+  },
+  {
+    "Id": 6,
+    "name": "Robert Taylor",
+    "email": "robert@medicalcorp.com",
+    "phone": "+1 (555) 567-8901",
+    "company": "MedicalCorp",
+    "position": "CTO",
+    "notes": "Healthcare company with strict compliance requirements.",
+    "createdAt": "2024-01-03T13:20:00Z",
+    "updatedAt": "2024-01-17T09:40:00Z"
+  }
+]
