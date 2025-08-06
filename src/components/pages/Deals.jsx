@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import ApperIcon from "@/components/ApperIcon";
-import Loading from "@/components/ui/Loading";
-import Error from "@/components/ui/Error";
-import Empty from "@/components/ui/Empty";
-import Modal from "@/components/molecules/Modal";
-import Button from "@/components/atoms/Button";
-import Input from "@/components/atoms/Input";
-import Select from "@/components/atoms/Select";
-import Badge from "@/components/atoms/Badge";
-import { dealService } from "@/services/api/dealService";
-import { contactService } from "@/services/api/contactService";
+import React, { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import { contactService } from "@/services/api/contactService";
+import { dealService } from "@/services/api/dealService";
+import ApperIcon from "@/components/ApperIcon";
+import Modal from "@/components/molecules/Modal";
+import Loading from "@/components/ui/Loading";
+import Error from "@/components/ui/Error";
+import Empty from "@/components/ui/Empty";
+import Badge from "@/components/atoms/Badge";
+import Input from "@/components/atoms/Input";
+import Button from "@/components/atoms/Button";
+import Select from "@/components/atoms/Select";
 
 const Deals = () => {
   const [deals, setDeals] = useState([]);
@@ -55,9 +55,9 @@ const Deals = () => {
     loadData();
   }, []);
 
-  const getContactName = (contactId) => {
+const getContactName = (contactId) => {
     const contact = contacts.find(c => c.Id === contactId);
-    return contact ? contact.name : "Unknown Contact";
+    return contact ? (contact.Name?.Name || contact.Name) : "Unknown Contact";
   };
 
   const getStageColor = (stage) => {
@@ -335,11 +335,11 @@ const Deals = () => {
             value={formData.contactId}
             onChange={(e) => setFormData({ ...formData, contactId: e.target.value })}
             required
-          >
+>
             <option value="">Select a contact</option>
             {contacts.map(contact => (
               <option key={contact.Id} value={contact.Id}>
-                {contact.name} - {contact.company}
+                {(contact.Name?.Name || contact.Name)} - {contact.company}
               </option>
             ))}
           </Select>
@@ -407,11 +407,11 @@ const Deals = () => {
             value={formData.contactId}
             onChange={(e) => setFormData({ ...formData, contactId: e.target.value })}
             required
-          >
+>
             <option value="">Select a contact</option>
             {contacts.map(contact => (
               <option key={contact.Id} value={contact.Id}>
-                {contact.name} - {contact.company}
+                {(contact.Name?.Name || contact.Name)} - {contact.company}
               </option>
             ))}
           </Select>

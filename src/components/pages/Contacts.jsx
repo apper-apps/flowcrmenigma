@@ -26,8 +26,8 @@ const Contacts = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
+const [formData, setFormData] = useState({
+    Name: "",
     email: "",
     phone: "",
     company: "",
@@ -35,7 +35,7 @@ const Contacts = () => {
     notes: ""
   });
 
-  const loadContacts = async () => {
+const loadContacts = async () => {
     try {
       setLoading(true);
       setError("");
@@ -67,12 +67,12 @@ const Contacts = () => {
     loadContacts();
   }, []);
 
-  useEffect(() => {
+useEffect(() => {
     if (searchQuery) {
       const filtered = contacts.filter(contact => 
-        contact.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        contact.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        contact.company.toLowerCase().includes(searchQuery.toLowerCase())
+        contact.Name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        contact.email?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        contact.company?.toLowerCase().includes(searchQuery.toLowerCase())
       );
       setFilteredContacts(filtered);
     } else {
@@ -91,8 +91,8 @@ const Contacts = () => {
       const newContact = await contactService.create(formData);
       setContacts([...contacts, newContact]);
       setShowAddModal(false);
-      setFormData({
-        name: "",
+setFormData({
+        Name: "",
         email: "",
         phone: "",
         company: "",
@@ -136,9 +136,9 @@ const Contacts = () => {
     }
   };
 
-  const openEditModal = (contact) => {
+const openEditModal = (contact) => {
     setFormData({
-      name: contact.name,
+      Name: contact.Name,
       email: contact.email,
       phone: contact.phone,
       company: contact.company,
@@ -219,8 +219,8 @@ const Contacts = () => {
                     onClick={() => handleSelectContact(contact)}
                   >
                     <div className="flex items-start justify-between">
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-semibold text-gray-900 truncate">{contact.name}</h3>
+<div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-semibold text-gray-900 truncate">{contact.Name}</h3>
                         <p className="text-sm text-gray-600 truncate">{contact.company}</p>
                         <p className="text-xs text-gray-500 mt-1">{contact.position}</p>
                       </div>
@@ -260,8 +260,8 @@ const Contacts = () => {
                 {/* Contact Header */}
                 <div className="mb-8">
                   <div className="flex items-center justify-between">
-                    <div>
-                      <h1 className="text-3xl font-bold text-gray-900">{selectedContact.name}</h1>
+<div>
+                      <h1 className="text-3xl font-bold text-gray-900">{selectedContact.Name}</h1>
                       <p className="text-lg text-gray-600">{selectedContact.position} at {selectedContact.company}</p>
                     </div>
                     <div className="flex gap-2">
@@ -382,9 +382,9 @@ const Contacts = () => {
       >
         <form onSubmit={handleAddContact} className="space-y-4">
           <Input
-            label="Full Name"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+label="Full Name"
+            value={formData.Name}
+            onChange={(e) => setFormData({ ...formData, Name: e.target.value })}
             required
           />
           <Input
@@ -436,9 +436,9 @@ const Contacts = () => {
       >
         <form onSubmit={handleEditContact} className="space-y-4">
           <Input
-            label="Full Name"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+label="Full Name"
+            value={formData.Name}
+            onChange={(e) => setFormData({ ...formData, Name: e.target.value })}
             required
           />
           <Input

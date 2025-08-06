@@ -85,10 +85,10 @@ const Tasks = () => {
     setFilteredTasks(filtered);
   }, [tasks, searchQuery, filterStatus, filterPriority]);
 
-  const getContactName = (contactId) => {
+const getContactName = (contactId) => {
     if (!contactId) return "No contact";
     const contact = contacts.find(c => c.Id === contactId);
-    return contact ? contact.name : "Unknown Contact";
+    return contact ? (contact.Name?.Name || contact.Name) : "Unknown Contact";
   };
 
   const getPriorityColor = (priority) => {
@@ -472,9 +472,9 @@ const Tasks = () => {
             onChange={(e) => setFormData({ ...formData, contactId: e.target.value })}
           >
             <option value="">No contact</option>
-            {contacts.map(contact => (
+{contacts.map(contact => (
               <option key={contact.Id} value={contact.Id}>
-                {contact.name} - {contact.company}
+                {(contact.Name?.Name || contact.Name)} - {contact.company}
               </option>
             ))}
           </Select>
@@ -532,9 +532,9 @@ const Tasks = () => {
             onChange={(e) => setFormData({ ...formData, contactId: e.target.value })}
           >
             <option value="">No contact</option>
-            {contacts.map(contact => (
+{contacts.map(contact => (
               <option key={contact.Id} value={contact.Id}>
-                {contact.name} - {contact.company}
+                {(contact.Name?.Name || contact.Name)} - {contact.company}
               </option>
             ))}
           </Select>

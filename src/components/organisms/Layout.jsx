@@ -1,7 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Outlet, NavLink, useLocation } from "react-router-dom";
 import ApperIcon from "@/components/ApperIcon";
 import { motion } from "framer-motion";
+import { AuthContext } from "../../App";
+
+const LogoutButton = () => {
+  const { logout } = useContext(AuthContext);
+  
+  return (
+    <button
+      onClick={logout}
+      className="group flex w-full gap-x-3 rounded-lg p-2 text-sm leading-6 font-semibold text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200"
+    >
+      <ApperIcon
+        name="LogOut"
+        size={20}
+        className="shrink-0 text-gray-400 group-hover:text-red-600"
+      />
+      Logout
+    </button>
+  );
+};
 
 const Layout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -64,7 +83,10 @@ const Layout = () => {
                       </NavLink>
                     </li>
                   ))}
-                </ul>
+</ul>
+              </li>
+              <li className="mt-auto">
+                <LogoutButton />
               </li>
             </ul>
           </nav>
@@ -119,7 +141,10 @@ const Layout = () => {
                   </NavLink>
                 </li>
               ))}
-            </ul>
+</ul>
+            <div className="mt-auto pt-4">
+              <LogoutButton />
+            </div>
           </nav>
         </motion.div>
       </div>
