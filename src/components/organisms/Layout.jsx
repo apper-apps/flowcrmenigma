@@ -26,12 +26,13 @@ const Layout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navigation = [
+const navigation = [
     { name: "Dashboard", href: "/", icon: "BarChart3" },
     { name: "Contacts", href: "/contacts", icon: "Users" },
     { name: "Deals", href: "/deals", icon: "Target" },
     { name: "Tasks", href: "/tasks", icon: "CheckSquare" },
-    { name: "Activities", href: "/activities", icon: "Clock" }
+    { name: "Activities", href: "/activities", icon: "Clock" },
+    { name: "Quotes", href: "/quotes", icon: "FileText" }
   ];
 
   const isActive = (href) => {
